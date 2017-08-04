@@ -80,14 +80,14 @@ function computePrice(listarr)
 }
 function buildPriceList(pricelist)
 {
-    let str="";
+    let printstr="";
     for(let i=0;i<pricelist.length-2;i++)
     {
-      str=str+`名称：${pricelist[i].name}，数量：${pricelist[i].num}${pricelist[i].unit}，单价：${pricelist[i].price.toFixed(2)}(元)，小计：${pricelist[i].sum.toFixed(2)}(元)\n`;
+      printstr=printstr+`名称：${pricelist[i].name}，数量：${pricelist[i].num}${pricelist[i].unit}，单价：${pricelist[i].price.toFixed(2)}(元)，小计：${pricelist[i].sum.toFixed(2)}(元)\n`;
     }
-    str="***<没钱赚商店>收据***\n"+str;
-    str=str+"----------------------\n"+`总计：${pricelist[pricelist.length-2].toFixed(2)}(元)\n`+`节省：${pricelist[pricelist.length-1].toFixed(2)}(元)\n`+"**********************";
-    return str;
+    printstr="***<没钱赚商店>收据***\n"+printstr;
+    printstr=printstr+"----------------------\n"+`总计：${pricelist[pricelist.length-2].toFixed(2)}(元)\n`+`节省：${pricelist[pricelist.length-1].toFixed(2)}(元)\n`+"**********************";
+    return printstr;
 }
 
 //var ss=computePrice(buildItem(tags));
